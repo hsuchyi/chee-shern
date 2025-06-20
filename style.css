@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap');
+
+
+/* General body styling */
+body {
+  margin: 0;
+  font-family: "Cormorant", serif;
+  font-size: larger;
+}
+
+/* Top bar styling */
+.top-bar {
+  background-color: #c9c3bd;
+  color: #504c4b;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo or title */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+}
+
+/* Navigation links */
+.nav-links a {
+  color: #504c4b;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+
