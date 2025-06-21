@@ -110,3 +110,35 @@ body {
 .dropdown-content a:hover {
   background-color: #ddd;
 }
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+#typed-text {
+    color:rgb(199, 92, 85);
+    font-weight: 700;
+}
+
+
+/* Blinking cursor animation */
+#cursor {
+    color: rgb(199, 92, 85);
+    font-weight: 300;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { 
+        opacity: 1; 
+    }
+    51%, 100% { 
+        opacity: 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
