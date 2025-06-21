@@ -1,11 +1,11 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap');
 
 /* General body styling */
 body {
   margin: 0;
-  font-family: "Cormorant", serif;
+  /* font-family: "Cormorant", sans-serif; */
+  font-family: 'Raleway', sans-serif;
   font-size: 25px;
 }
 
@@ -21,7 +21,31 @@ body {
   font-weight: bold;
   padding: 0 10px;
   color: #504c4b;
+  position: relative; 
+  cursor: pointer;   
+  display: inline-block; 
+  padding-bottom: 20px;
+  margin-bottom: -20px;
 }
+
+/* Underline animation effect */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  background: #c94040; 
+  transition: width .3s ease;
+  bottom: 2px; 
+  left: 0;
+}
+
+.nav-item:hover::after,
+.dropdown:hover .dropdown-toggle::after {
+  width: 100%;
+}
+
 
 .divider {
   font-size: 25px;
@@ -54,19 +78,24 @@ body {
 
 /* Dropdown content that fills the screen horizontally */
 .dropdown-content {
-  display: none;
+  visibility: hidden; 
+  opacity: 0;
+  transform: translateY(-10px); 
   position: fixed;
-  top: 70px;
+  top: 68px;
   left: 0;
   width: 100vw;
-  background-color: #fff;  /* adjust as needed */
+  background-color: #fff;  
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
   z-index: 1;
+  transition: opacity 0.3s ease-out, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* Display the dropdown on hover */
 .dropdown:hover .dropdown-content {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0); 
 }
 
 /* Style the dropdown items */
@@ -81,4 +110,3 @@ body {
 .dropdown-content a:hover {
   background-color: #ddd;
 }
-
