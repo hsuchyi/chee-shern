@@ -3,53 +3,59 @@
 
 /* General body styling */
 body {
-  margin: 0;
-  /* font-family: "Cormorant", sans-serif; */
-  font-family: 'Raleway', sans-serif;
-  font-size: 25px;
+    margin: 0;
+    /* font-family: "Cormorant", sans-serif; */
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    background-image: url('assets/silk-4916174_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
+
 .top-bar {
-  background-color: #c9c3bd;
-  color: #504c4b;
-  padding: 20px 30px;
-  text-align: center;
+    background-color: #e4e0dc;
+    color: #504c4b;
+    padding: 20px 30px;
+    text-align: center;
 }
 
 .nav-item {
-  font-size: 25px;
-  font-weight: bold;
-  padding: 0 10px;
-  color: #504c4b;
-  position: relative; 
-  cursor: pointer;   
-  display: inline-block; 
-  padding-bottom: 20px;
-  margin-bottom: -20px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 10px;
+    color: #504c4b;
+    position: relative; 
+    cursor: pointer;   
+    display: inline-block; 
+    padding-bottom: 20px;
+    margin-bottom: -20px;
 }
 
 /* Underline animation effect */
 .nav-item::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  display: block;
-  background: #c94040; 
-  transition: width .3s ease;
-  bottom: 2px; 
-  left: 0;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #271818; 
+    transition: width .3s ease;
+    bottom: 2px; 
+    left: 0;
 }
 
 .nav-item:hover::after,
 .dropdown:hover .dropdown-toggle::after {
-  width: 100%;
+    width: 100%;
 }
 
 
 .divider {
-  font-size: 25px;
-  padding: 0 10px;
+    font-size: 25px;
+    padding: 0 10px;
 }
 
 /* Logo or title */
@@ -61,54 +67,54 @@ body {
 
 /* Navigation links */
 .nav-links a {
-  color: #504c4b;
-  text-decoration: none;
-  margin-left: 20px;
+    color: #504c4b;
+    text-decoration: none;
+    margin-left: 20px;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Dropdown container */
 .dropdown {
-  display: inline-block;
-  position: relative;
+    display: inline-block;
+    position: relative;
 }
 
 /* Dropdown content that fills the screen horizontally */
 .dropdown-content {
-  visibility: hidden; 
-  opacity: 0;
-  transform: translateY(-10px); 
-  position: fixed;
-  top: 68px;
-  left: 0;
-  width: 100vw;
-  background-color: #fff;  
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-  transition: opacity 0.3s ease-out, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    visibility: hidden; 
+    opacity: 0;
+    transform: translateY(-10px); 
+    position: fixed;
+    top: 68px;
+    left: 0;
+    width: 100vw;
+    background-color: #fff;  
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: opacity 0.3s ease-out, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* Display the dropdown on hover */
 .dropdown:hover .dropdown-content {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0); 
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); 
 }
 
 /* Style the dropdown items */
 .dropdown-content a {
-  display: block;
-  padding: 12px 20px;
-  color: #504c4b;
-  text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+    color: #504c4b;
+    text-decoration: none;
 }
 
 /* Hover effect for dropdown items */
 .dropdown-content a:hover {
-  background-color: #ddd;
+    background-color: #ddd;
 }
 .container {
     text-align: center;
@@ -116,7 +122,7 @@ body {
 }
 
 #typed-text {
-    color:rgb(199, 92, 85);
+    color:rgb(63, 36, 34);
     font-weight: 700;
 }
 
@@ -141,4 +147,20 @@ body {
     h1 {
         font-size: 2rem;
     }
+}
+
+/* About section */
+.about {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+    font-size: xx-large;
+}
+
+.about-content {
+    text-align: center;
+    font-weight: 100;
+    font-size: large;
+    
+    
 }
