@@ -1,13 +1,16 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap'); */
 
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
 /* General body styling */
 body {
     margin: 0;
-    /* font-family: "Cormorant", sans-serif; */
-    font-family: 'Raleway', sans-serif;
+    font-family: "Cormorant", sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
     font-size: 25px;
-    background-image: url('assets/silk-4916174_1280.jpg');
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -116,9 +119,25 @@ body {
 .dropdown-content a:hover {
     background-color: #ddd;
 }
-.container {
+.about-container {
     text-align: center;
     padding: 20px;
+    background-image: url('assets/silk-4916174_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+
+}
+.about-container.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #typed-text {

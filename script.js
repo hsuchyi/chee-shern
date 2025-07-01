@@ -18,3 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
         delayBetweenTexts: 2000
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutContainer = document.querySelector('.about-container');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                aboutContainer.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.5 }); // adjust threshold as needed
+
+    observer.observe(aboutContainer);
+});
