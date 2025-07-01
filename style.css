@@ -203,10 +203,6 @@ a.nav-item {
     text-align: center;
     padding-left: 10px;
 }
-.member1-container.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .member1-content {
     text-align: left;
@@ -214,5 +210,8 @@ a.nav-item {
     font-size: large;
     width: 50%;
     margin-left: 45vw; /* starts text at 50% of viewport width */
-    padding: 20px; /* optional, for spacing */
+    padding: 30px; /* optional, for spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
