@@ -190,28 +190,70 @@ a.nav-item {
 }
 
 /* member section */
-.member1-container {
+.member1 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    background-image: url('assets/member1.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
-    padding-left: 10px;
+    flex-direction: row;  /* Side by side layout */
+    align-items: center;  /* Vertically center the items */
 }
 
-.member1-content {
-    text-align: left;
-    font-weight: 100;
-    font-size: large;
-    width: 50%;
-    margin-left: 45vw; /* starts text at 50% of viewport width */
-    padding: 30px; /* optional, for spacing */
+.member1-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/member-bg.jpg');
+    background-position: center bottom;
 }
+
+
+.member1-img {
+    width: 30%;                  /* Occupies 30% of the member1 container */
+    display: flex;
+    justify-content: center;     /* Optional: centers the image inside its container */
+    align-items: center;
+}
+
+.member1-img img {
+    width: 70%;                 /* The image takes up the entire width of its container */
+    height: auto;                /* Maintain the image’s aspect ratio */
+    border-radius: 200px;         /* Keeping your rounded corners */
+    animation: slide 0.75s 0.4s forwards; /* Animation for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow effect to the image */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+    margin-left: 300px; /* Adjust margin as needed */
+    
+}
+
+.member1-content {
+    width: 50%;                  /* Occupies the remaining 70% */
+    text-align: left;            /* Align the text on the left */
+    font-weight: 100;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* Vertically center if needed */
+    padding: 20px;               /* Adjust spacing as desired */
+    margin-left: 100px;
+    animation: slide 0.75s 0.4s forwards; /* Animation for the image */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.title {
+    animation: slide 0.75s 0.4s forwards;
+    align-self: center;
+    margin-bottom: 150px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate3d(0,15%,0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0);
+        opacity: 1;
+    }
+}
+
