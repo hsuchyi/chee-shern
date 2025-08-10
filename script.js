@@ -19,16 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const aboutContainer = document.querySelector('.about-container');
-    const observer = new IntersectionObserver((entries) => {
+document.addEventListener('DOMContentLoaded', () => {
+    // Select both the about-container, gallery, & member1-introduction elements
+    const fadeElements = document.querySelectorAll('.about-container, .gallery, .member1-introduction, .timeline-container, .highlight-section, .contact-container');
+
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                aboutContainer.classList.add('visible');
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Add this line to unobserve the element
             }
         });
-    }, { threshold: 0.5 }); // adjust threshold as needed
+    }, { threshold: 0.1 });
 
-    observer.observe(aboutContainer);
+    // Observe each selected element
+    fadeElements.forEach(el => observer.observe(el));
 });
+
 
