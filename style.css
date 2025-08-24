@@ -322,12 +322,12 @@ a.nav-item {
 }
 
 
- /* .member1-img {
-    width: 30%;                   
+ .member1-img {
+    width: 50%;                   
     display: flex;
     justify-content: center;     
     align-items: center;
-} */
+}
 
 .member1-img img {
     width: 40%;                  /* Maintain the image’s aspect ratio */
@@ -342,7 +342,7 @@ a.nav-item {
     width: 50%;                  /* Occupies the remaining 50% */
     text-align: left;            /* Align the text on the left */
     font-weight: 100;
-    font-size: large;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;     /* Vertically center if needed */
