@@ -342,7 +342,7 @@ a.nav-item {
     width: 50%;                  /* Occupies the remaining 50% */
     text-align: left;            /* Align the text on the left */
     font-weight: 100;
-    font-size: 20px;
+    font-size: large;
     display: flex;
     flex-direction: column;
     justify-content: center;     /* Vertically center if needed */
