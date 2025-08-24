@@ -130,24 +130,31 @@ a.nav-item {
     text-decoration: none;
 }
 
-.Shen-introduction {
+.shen-introduction {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.landing-video {
-    margin-top: 10px;
+.shen-introduction.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.landing-image {
     position: absolute;
     top: 50%;
     left: 50%;
-    bottom: 50%;
-    width: 80%;      /* Adjust as needed; this makes the video smaller */
+    width: 80%;      
     height: auto;    /* Keeps the correct aspect ratio */
     transform: translate(-50%, -50%);
     z-index: 1;
     border-radius: 10px;
+    object-fit: cover; /* Ensure the image covers the entire area */
 }
 
 .video-overlay {
@@ -162,10 +169,10 @@ a.nav-item {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;  /* Change color so it stands out on your video */
+  color: #fff;  
   padding: 20px;
   font-size: larger;
-}
+} */
 
 /* Hover effect for dropdown items */
 .dropdown-content a:hover {
@@ -174,7 +181,7 @@ a.nav-item {
 .about-container {
     text-align: center;
     padding: 20px;
-    background-image: url('assets/silk-4916174_1280.jpg');
+    background-image: url('assets/landing/FSX08281.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -186,6 +193,7 @@ a.nav-item {
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
     margin-bottom: 0;
+    color: rgb(232, 232, 232)
 
 }
 .about-container.visible {
@@ -194,15 +202,27 @@ a.nav-item {
     font-size: 2.5rem;
 }
 
+
+.about-content {
+    font-size: large;
+    margin-top: 25%;
+    width: 50%;          /* Set a specific width */
+    height: auto;         /* Add height property */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(98, 98, 100, 0.7);  /* Added alpha channel for opacity */
+    padding: 10px;        /* Add padding to create space around the text */
+    border-radius: 10px;   /* Optional: adds rounded corners */
+}
 #typed-text {
-    color:rgb(63, 36, 34);
+    color:rgb(232, 232, 232);
     font-weight: 700;
     font-size: 2.5rem;
-    
 }
 
 .about-container h1 {
     font-size: 2.5rem;
+    margin-top: -10%;
 }
 
 .gallery {
@@ -241,12 +261,12 @@ a.nav-item {
     font-size: large;
     display: flex;
     flex-direction: column;
-    justify-content: center;     /* Vertically center if needed */
+    justify-content: center;     /* Vertically center*/
     margin-left: 40%;
 }
 
 .site-footer {
-  background-color: #ffffff; /* Same as your top-bar or adjust as desired */
+  background-color: #ffffff; /* Same as top-bar */
   color: #504c4b;
   text-align: center;
   padding: 10px 0;
@@ -257,7 +277,7 @@ a.nav-item {
 }
 /* Blinking cursor animation */
 #cursor {
-    color: rgb(80, 66, 65);
+    color: rgb(216, 216, 216);
     font-weight: 300;
     animation: blink 0.7s infinite;
     font-size: 2.5rem;
@@ -332,7 +352,7 @@ a.nav-item {
 .member1-img img {
     width: 40%;                  /* Maintain the image’s aspect ratio */
     border-radius: 500px;         /* Keeping your rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow effect to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-left: 40%; 
     
 }
@@ -345,7 +365,7 @@ a.nav-item {
     font-size: large;
     display: flex;
     flex-direction: column;
-    justify-content: center;     /* Vertically center if needed */
+    justify-content: center;     /* Vertically center*/
     padding-right: 10%;
 
 }
@@ -587,7 +607,7 @@ a.nav-item {
     display: block;
 }
 
-/* Add this to ensure the parent container is full width */
+
 .portfolio-grid {
     width: 100%;
     display: flex;

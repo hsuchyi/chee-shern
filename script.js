@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     // Select both the about-container, gallery, & member1-introduction elements
-    const fadeElements = document.querySelectorAll('.about-container, .gallery, .member1-introduction, .timeline-container, .highlight-section, .contact-container');
+    const fadeElements = document.querySelectorAll('.about-container, .gallery, .member1-introduction, .timeline-container, .highlight-section, .contact-container, .shen-introduction');
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
