@@ -14,7 +14,7 @@
     <div class="dropdown">
       <span class="nav-item dropdown-toggle">Members</span>
       <div class="dropdown-content">
-        <a href="felix.html">Felix See</a>
+        <!-- <a href="felix.html">Felix See</a> -->
         <a href="olivia.html">Olivia Sia</a>
         <a href="jon.html">Jonathan Cheah</a>
         <a href="chan.html">Chan Ngan Hong</a>
@@ -61,7 +61,7 @@
                                     Olivia specializes in polishing game dialogue to a professional standard
                                     using industry-leading tools like Adobe Audition and iZotope RX. From deep cleaning noisy
                                     recordings to restoring clarity and presence, she ensures every voice line sounds clean,
-                                    consistent, and ready for immersive storytelling.
+                                    consistent, and ready for  immersive storytelling
                                 </div>
                             </div>
                             <div class="timeline-image-wrapper">
@@ -104,8 +104,8 @@
                                 <div class="timeline-text">
                                     She brings studio experience in recording voiceovers, audiobooks, and dubbing
                                     sessions. With a strong understanding of vocal performance and technical workflow, she
-                                    ensures every session runs smoothly and delivers professional-grade audio with clarity and
-                                    consistency.
+                                    ensures every session runs smoothly and  delivers professional-grade audio with clarity and
+                                    consistency
                                     </div>
                             </div>
                             <div class="timeline-image-wrapper">
@@ -168,33 +168,41 @@
             </div>
             </div>
         </div>
-        
-        <div class="contact-container">
-            <div class="contact-content">
-            <h2>Contact Us</h2>
-        
-            
-        </div>
-            <div class="contact-form">
-                <h2>Send Message</h2>
-                <div class="input-box">
-                    <input type="text" name="" required="required">
-                    <span>Name</span>
-                </div>
-                <div class="input-box">
-                    <input type="text" name="" required="required">
-                    <span>Email</span>
-                </div>
-                <div class="input-box">
-                    <textarea required="required"></textarea>
-                    <span>Message</span>
-            </div>
-                <div class="input-box">
-                    <input type="submit" value="Send">
-                </div>
-        </div>
+<section class="contact-section">
+  <div class="contact-intro">
+    <h2 class="contact-title">Contact Us</h2>
+
+  </div>
+
+  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+    <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+    <input type="hidden" name="from_name" value="My Website" />
+
+
+    <div class="form-group-container">
+      <div class="form-group">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+      </div>
+      <div class="form-group">
+        <label for="phone" class="form-label">Phone</label>
+        <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+      </div>
     </div>
-    <div style="height: 50vh"></div>
+    <button class="form-submit" type="submit">Send Message</button>
+  </form>
+
+</section>
 
     <footer class="site-footer">
   <p>&copy; 2025 Shen. All Rights Reserved.</p>
