@@ -263,11 +263,13 @@ a.nav-item {
     background-color: rgba(98, 98, 100, 0.7);  /* Added alpha channel for opacity */
     padding: 10px;        /* Add padding to create space around the text */
     border-radius: 10px;   /* Optional: adds rounded corners */
+    box-sizing: border-box;
+    padding-right: 20px;
 }
 #typed-text {
     color:rgb(232, 232, 232);
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: inherit;
 }
 
 .about-container h1 {
@@ -278,15 +280,13 @@ a.nav-item {
 .gallery {
     background-image: url(assets/gallery.png);
     background-size: cover;
-    background-position: center;
-    height: 90vh;
+    background-position: center top;
+    min-height: 90vh;
     width: 100vw;
     display: flex;
     flex-direction: column;  /* Stack children vertically */
     align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
@@ -299,20 +299,33 @@ a.nav-item {
 
 
 .gallery h1 {
-    width: 50%;                  /* Occupies the remaining 70% */
-    margin-left: 40%; /* Center the heading */
     margin-bottom: 20px;
 }
 
 .gallery p {
-    width: 50%;                  /* Occupies the remaining 70% */
-    text-align: left;            /* Align the text on the left */
     font-weight: 100;
     font-size: large;
+}
+
+.gallery-caption-section {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 2rem 1rem 3rem;
+    box-sizing: border-box;
+    background-color: #e4e0dc;
     display: flex;
-    flex-direction: column;
-    justify-content: center;     /* Vertically center*/
-    margin-left: 40%;
+    justify-content: center;
+}
+
+.gallery-text-box {
+    width: min(90%, 42rem);
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: transparent;
+    color: #504c4b;
+    border-radius: 0;
+    box-sizing: border-box;
 }
 
 .site-footer {
@@ -330,7 +343,7 @@ a.nav-item {
     color: rgb(216, 216, 216);
     font-weight: 300;
     animation: blink 0.7s infinite;
-    font-size: 2.5rem;
+    font-size: inherit;
 }
 
 @keyframes blink {
@@ -408,6 +421,9 @@ a.nav-item {
         margin-top: 20px;
         padding: 20px;
         font-size: 16px;
+        text-align: center;
+        box-sizing: border-box;
+        padding-right: 24px;
     }
     
     /* About Section */
@@ -419,7 +435,17 @@ a.nav-item {
         background-repeat: no-repeat;
         background-position: center top; /* Adjust positioning */
         background-color: #212120;
-    
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about {
+        width: 100%;
+        max-width: 42rem;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     /* Gallery Section */
@@ -430,16 +456,13 @@ a.nav-item {
         background-size: cover; /* Change to contain for mobile */
         background-position: left; /* Adjust positioning */
         background-repeat: no-repeat;
-        background-color: #efede7;
+        background-color: #e4e0dc;
     }
     
     .gallery-text-box {
         width: 90%;
         margin: 20px auto; /* Center the box */
-        background-color: rgba(98, 98, 100, 0.7); /* Same as about-content */
-        padding: 20px; /* Same as about-content */
-        border-radius: 10px; /* Same as about-content */
-        text-align: center;
+        padding-right: 24px;
     }
 
     .gallery h1 {
@@ -463,6 +486,12 @@ a.nav-item {
     }
     
     #typed-text {
+        font-size: 1.8rem;
+        display: inline !important;
+        margin-top: 0;
+    }
+
+    #cursor {
         font-size: 1.8rem;
     }
 
@@ -500,7 +529,7 @@ a.nav-item {
 
     .nav-item,
     .divider {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .about-container {
@@ -511,10 +540,17 @@ a.nav-item {
         width: 95%;
         padding: 15px;
         margin-top: 10px;
+        text-align: center;
     }
 
     #typed-text {
-        font-size: 1.5rem;
+        font-size: 1.15rem;
+        display: inline !important;
+        margin-top: 0;
+    }
+
+    #cursor {
+        font-size: 1.15rem;
     }
 
     
@@ -525,6 +561,17 @@ a.nav-item {
         background-repeat: no-repeat;
         min-height: 60vh; /* Reduce min-height for very small screens */
         background-color: #212120;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about {
+        width: 100%;
+        max-width: 42rem;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .gallery {
@@ -532,13 +579,19 @@ a.nav-item {
         background-size: cover; /* Ensure it stays contained on very small screens */
         min-height: 50vh; /* Reduce min-height for very small screens */
         background-repeat: no-repeat;
-        background-color: #efede7;
+        background-color: #e4e0dc;
     }
 
         /* Adjust text box for very small screens */
     .gallery-text-box {
         width: 95%;
         padding: 15px; /* Slightly less padding on very small screens */
+        color: #504c4b;
+    }
+
+    .gallery-caption-section {
+        margin-top: 1rem;
+        padding: 1.5rem 0.75rem 2.5rem;
     }
     
 

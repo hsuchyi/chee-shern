@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const typedElement = document.getElementById('typed-text');
 
+    if (!typedElement || typeof Typewriter === 'undefined') {
+        return;
+    }
+
     const photoTexts = [
     "Precious Moments.",
     "Lasting Memories.",
@@ -34,6 +38,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Observe each selected element
     fadeElements.forEach(el => observer.observe(el));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const timelineSections = Array.from(document.querySelectorAll('.section-timeline'));
+
+    if (!timelineSections.length) {
+        return;
+    }
+
+    const trackedTimelines = timelineSections
+        .map(section => ({
+            section,
+            bar: section.querySelector('.timeline-progress-bar')
+        }))
+        .filter(item => item.bar);
+
+    if (!trackedTimelines.length) {
+        return;
+    }
+
+    let ticking = false;
+
+    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+    const updateTimelineProgress = () => {
+        const viewportHeight = window.innerHeight;
+
+        trackedTimelines.forEach(({ section, bar }) => {
+            const rect = section.getBoundingClientRect();
+            const totalTravel = rect.height + viewportHeight;
+            const rawProgress = (viewportHeight - rect.top) / totalTravel;
+            const progress = clamp(rawProgress, 0, 1);
+
+            bar.style.height = `${progress * 100}%`;
+        });
+
+        ticking = false;
+    };
+
+    const requestTimelineUpdate = () => {
+        if (ticking) {
+            return;
+        }
+
+        ticking = true;
+        window.requestAnimationFrame(updateTimelineProgress);
+    };
+
+    window.addEventListener('scroll', requestTimelineUpdate, { passive: true });
+    window.addEventListener('resize', requestTimelineUpdate);
+    requestTimelineUpdate();
 });
 
 // mobile responsive dropdown
