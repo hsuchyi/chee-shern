@@ -481,7 +481,7 @@ a.nav-item {
 
 /* PORTFOLIO DUMP */
 .portfolio-dump {
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -496,14 +496,14 @@ a.nav-item {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     gap: 20px;
-    width: 90%;
+    width: min(100%, 1200px);
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     justify-content: center;
-    padding-right: 20px; /* Add right padding */
     box-sizing: border-box; /* Ensure padding doesn't increase total width */
     align-items: center;
+    justify-items: center;
 }
 
 .image-grid img {
@@ -763,7 +763,7 @@ textarea
 
     /* Portfolio Section */
     .portfolio-dump {
-        padding: 40px 15px;
+        padding: 40px 16px;
     }
 
     .portfolio-dump h1 {
@@ -772,8 +772,8 @@ textarea
 
     .image-grid {
         grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        padding: 10px;
+        width: min(100%, 1200px);
+        padding: 10px 0;
         gap: 15px;
     }
 
